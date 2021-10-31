@@ -1,7 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;900&display=swap');
-@import url('./assets/font/gotham-ultra.ttf');
-@import url('./assets/font/GothamRounded-Light.otf');
-@import url('./assets/font/GothamRounded-Bold.otf');
+
+@font-face {
+  font-family: "Gotham ultra";
+  src: url('./assets/font/gotham-ultra.ttf');
+  src: url('./assets/font/gotham-ultra.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Rounded";
+  src: url('./assets/font/GothamRounded-Light.otf');
+  src: url('./assets/font/GothamRounded-Light.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Rounded Bold";
+  src: url('./assets/font/GothamRounded-Bold.otf');
+  src: url('./assets/font/GothamRounded-Bold.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 
 * {
   box-sizing: border-box;
@@ -21,7 +44,7 @@ body {
 }
 
 #brand {
-  font-family: Gotham ultra;
+  font-family: "Gotham ultra";
   color: #29235C;
   text-align: center;
   margin-top: 2px;
