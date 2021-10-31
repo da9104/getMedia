@@ -8,9 +8,10 @@ router.use(
          credentials: true,
          origin:[
              '*',
-             'http://localhost:5500',
              'http://localhost:5600',
-             'https://get--media.herokuapp.com/'
+             'https://get--media.herokuapp.com/',
+             'get--media.herokuapp.com/',
+             'https://git.heroku.com/get--media.git',
          ]
         })
         );
