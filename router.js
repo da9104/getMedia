@@ -6,6 +6,7 @@ router.use(
     cors({
          credentials: true,
          origin:[
+             '*',
              'http://localhost:5600',
              'https://get--media.herokuapp.com',
              'https://get--media.herokuapp.com/',
@@ -17,11 +18,8 @@ router.use(
         );
 
 router.get('/', function(req, res) {
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header("Access-Control-Allow-Origin", "https://get--media.herokuapp.com")
-    res.header("Access-Control-Allow-Origin", "get--media.herokuapp.com")
+    res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Credentials", "true");
-   // res.header("Access-Control-Max-Age", "0");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS"); 
     res.render('index')
