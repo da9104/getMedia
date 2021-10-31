@@ -1,3 +1,14 @@
+// font 
+(() => {
+    // load local font
+      let font = document.createElement('link');
+      font.rel = 'stylesheet';
+      font.href = './assets/font/gotham-ultra.ttf';
+      font.onload = () => document.body.classList.add('wf-active');
+      document.head.appendChild(font);
+ })();
+ 
+
 var iTunesGenre = async () => {
     try {
             const config = {
