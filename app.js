@@ -1,7 +1,7 @@
 const express = require('express');
 const request = require('request');
-const router = require('./router')
 var cors = require('cors');    
+const router = require('./router')
 const app = express();
 
 app.use(express.static('public'))
@@ -9,16 +9,17 @@ app.set('views','views')
 app.set('view engine', 'ejs')
 
 app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-    res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE"); 
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
+    res.setHeader("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS");    
     next();
 });        
 
 const corsOptions = {
     origin: [
-        '*',
         'localhost:5600',
+        'http://localhost:5600',
         'https://get--media.herokuapp.com',
         'https://get--media.herokuapp.com/',
         'get--media.herokuapp.com',
