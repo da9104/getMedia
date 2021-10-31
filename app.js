@@ -18,8 +18,8 @@ app.use((req, res, next) => {
 const corsOptions = {
     origin: [
         'http://localhost:5600',
-        'https://get--media.herokuapp.com/',
-        'get--media.herokuapp.com/',
+        'https://get--media.herokuapp.com',
+        'get--media.herokuapp.com',
         'https://git.heroku.com/get--media.git',
         'git.heroku.com/get--media.git'
     ],
