@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;900&display=swap");
+@import url("./assets/font/gotham-ultra.ttf");
+@import url("./assets/font/GothamRounded-Light.otf");
+@import url("./assets/font/GothamRounded-Bold.otf");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans", "sans serif";
+  margin: 0;
+}
+
+#logo {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
+#brand {
+  font-family: Gotham ultra;
+  color: #29235C;
+  text-align: center;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+.brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+.nav--search {
+  margin-top: 10px;
+  margin-bottom: auto;
+  margin-left: 20px;
+  margin-right: auto;
+  width: 520px;
+}
+
+.nav--search button {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 25px;
+  position: relative;
+  left: -29px;
+  bottom: 2px;
+  border: 0px solid #444;
+  background-color: #B7B8F1;
+}
+
+.nav--search i {
+  color: white;
+  font-size: 6px;
+  text-align: center;
+  border-radius: 100%;
+  border: 1px solid white;
+  margin-top: 0;
+  padding: 7px;
+}
+
+.nav--search input[type=search] {
+  width: 85%;
+  padding: 9px;
+  border: 0px solid white;
+  background-color: #EEEEEE;
+  border-radius: 25px;
+}
+
+#searchField {
+  border: 1px solid #444;
+  border-radius: 25px;
+  padding: 9px;
+  background: #fff;
+}
+
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact h2 {
+  font-family: 'Gotham Rounded';
+  text-align: center;
+  margin: 100px auto 0;
+}
+
+#contact p {
+  font-family: 'Work Sans';
+  text-align: center;
+  font-weight: 500;
+  color: #6F6F6F;
+}
+
+#contact a {
+  color: white;
+  background-color: #EFCC3E;
+  border: 0;
+  border-radius: 45px;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-family: 'Gotham Rounded';
+  text-decoration: none;
+}
+
+#contact--header {
+  font-family: 'Work Sans' !important;
+  color: #6F6F6F;
+  padding-left: 180px;
+}
+
+#contact--formfield {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact--forms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+}
+
+#contact--forms input {
+  border: 0;
+  border-bottom: 1px solid gray;
+  margin-right: 20px;
+}
+
+textarea {
+  background: gray center center no-repeat;
+  /* This ruins default border */
+  border: 1px solid #888;
+  color: white;
+}
+
+#contact--submit {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#contact--submit .checkbox {
+  -ms-grid-column-align: left;
+      justify-self: left;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #C4C4C4;
+}
+
+#contact--submit button {
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border: 1px solid gray;
+  border-radius: 45px;
+  padding: 10px 25px 10px 25px;
+  font-family: 'Work Sans';
+}
+
+footer {
+  margin-top: 45px;
+  padding: 10px;
+  background-color: #EEEEEE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer p {
+  text-transform: uppercase;
+  font-family: 'Work Sans';
+  color: #292929;
+  font-size: 12px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+footer ul, footer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 25px;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,37 @@
+const express = require('express')
+const router = express.Router()
+var cors = require('cors');    
+
+
+router.use(
+    cors({
+         credentials: true,
+         origin:[
+             '*',
+             'http://localhost:5500',
+             'http://localhost:5600'
+         ]
+        })
+        );
+
+router.get('/', function(req, res) {
+    res.set('Access-Control-Allow-Origin', '*');
+    res.header("Access-Control-Allow-Origin", "*")
+    res.header("Access-Control-Allow-Credentials", "true");
+    res.header("Access-Control-Max-Age", "1800");
+    res.header("Access-Control-Allow-Headers", "content-type");
+    res.header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS"); 
+    res.render('index')
+})
+
+router.get('/search', function(req, res) {
+    res.render('search')
+})
+router.get('/shop', function(req, res) {
+    res.render('shop')
+})
+router.get('/contact', function(req, res) {
+    res.render('contact')
+})
+
+module.exports = router

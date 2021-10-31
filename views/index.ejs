@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+ <head>
+ <title>AngularJS iTunes</title>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script src="https://kit.fontawesome.com/93d605acff.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
+ <link rel="stylesheet" href="./styles.css">
+ </head>
+<body>
+
+<nav>
+
+   <div class="brand">
+      <a href="/"><img src="./assets/images/logo.png" alt="logo" id="logo"></a>
+      <span id="brand"> GETMEDIA </span>  
+   </div>
+
+   <ul>
+      <li><a href="/">HOME</a></li>
+      <li><a href="/search">SEARCH</a></li>
+      <li><a href="/shop">SHOP</a></li>
+      <li><a href="/contact">CONTACT</a></li>
+   </ul>   
+</nav>
+
+ <!-- use the ng-controller directive to scope
+ this body to iTunesController -->
+ <div ng-controller="iTunesController">
+
+    <div id="genre">
+    </div>    
+
+ <!-- show an error if there's a search error -->
+ {{ error }}
+ <!-- add form, use ng-submit directive to call
+ searchiTunes, pass the artist -->
+ <form action="#" name="search" ng-submit="searchiTunes(artist)">
+
+ <!-- Artist/band name required, use the ng-model 
+ directive to pass the artist name back into the
+ controller/model -->
+ <input id="searchField" type="search" required ng-model="artist"  placeholder="&#xF002; Search" style="font-family: Arial, 'FontAwesome'"/>
+
+ <!-- <i class="fa fa-search"></i> -->
+
+ <button type="submit" value="Search"/>
+ <i class="fas fa-play"></i></button>
+ </form>
+ <!-- ng-show directive to decide when to show results.
+ In this case, we will show the songs when there
+ are songs to show. -->
+
+ <table ng-show="songs">
+
+ <thead>
+ <tr>
+ <th>Album Artwork</th>
+ <th>Track</th>
+ <th>Artist name</th>
+ <th>Preview&nbsp;</th>
+ <th>Price</th>
+
+ </tr>
+ </thead>
+ <tbody>
+ <!-- ng-repeat directive to loop over each 
+ song in the songs list. -->
+ <!-- The song data is loaded into objects for
+ easy access. Just call on the attributes
+ you need. -->
+ <tr ng-repeat="song in songs">
+ <!-- ng-src lets you load imgs when data
+ is present. -->
+ <td><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></td>
+ <td>{{song.trackName}}</td>
+ <td>{{song.artistName}}</td>
+ <td><a href="{{song.previewUrl}}">Play</a></td>
+ <td>{{song.collectionPrice}}</td>
+
+
+ </tr>
+ </tbody>
+ </table>
+</div>
+
+
+<footer>
+
+   <p>
+      2021 (C) COPYRIGHT - GETMEDIA
+   </p>
+ 
+   <ul>
+      <li>
+         <i class="fab fa-instagram"></i>
+      </li>
+      <li>
+         <i class="fab fa-facebook"></i>
+      </li>
+      <li>
+         <i class="fab fa-twitter"></i>
+      </li>
+   </ul>
+
+
+</footer>
+
+ <!-- the script which will contain the iTunesController -->
+<script src="./iTunesController.js"></script>
+
+</body>
+</html>
