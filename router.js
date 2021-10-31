@@ -2,7 +2,6 @@ const express = require('express')
 const router = express.Router()
 var cors = require('cors');    
 
-
 router.use(
     cors({
          credentials: true,
@@ -18,8 +17,7 @@ router.use(
         );
 
 router.get('/', function(req, res) {
-    res.set('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Origin', 'origin');
+    res.setHeader('Access-Control-Allow-Origin', cors());
     res.header("Access-Control-Allow-Origin", "https://get--media.herokuapp.com")
     res.header("Access-Control-Allow-Origin", "get--media.herokuapp.com")
     res.header("Access-Control-Allow-Credentials", "true");
