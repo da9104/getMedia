@@ -11,6 +11,7 @@ app.set('view engine', 'ejs')
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Origin', 'https://get--media.herokuapp.com');
+    res.header('Access-Control-Allow-Origin', 'get--media.herokuapp.com/');
     next();
 });        
 
