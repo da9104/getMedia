@@ -2,24 +2,27 @@
 
 @font-face {
   font-family: "Gotham ultra";
-  src: url('./assets/font/gotham-ultra.ttf') format("truetype");
-  src: url('//assets/font/gotham-ultra.ttf') format('ttf');
+  src: url(./assets/font/gotham-ultra.ttf) format("truetype");
+  src: url(//assets/font/gotham-ultra.ttf) format('ttf');
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham Rounded";
-  src: url('./assets/font/GothamRounded-Light.otf') format("truetype");
-  src: url('./assets/font/GothamRounded-Light.otf') format('otf');
+  src: url(./assets/font/GothamRounded-Light.otf) format("truetype");
+  src: url(./assets/font/GothamRounded-Light.otf) format('otf');
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gotham Rounded Bold";
-  src: url('./assets/font/GothamRounded-Bold.otf') format("truetype");
-  src: url('./assets/font/GothamRounded-Bold.otf') format('otf');
+  src: url(./assets/font/GothamRounded-Bold.otf) format("truetype");
+  src: url(./assets/font/GothamRounded-Bold.otf) format('otf');
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
 }
