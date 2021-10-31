@@ -9,7 +9,7 @@ var iTunesGenre = async () => {
                     'Access-Control-Allow-Credentials': 'true'
                 }
             }
-            const res = await axios.get(`http://itunes.apple.com/search?term=lew&entity=album`, config)
+            const res = await axios.get(`https://itunes.apple.com/search?term=lew&entity=album`, config)
             let text = "";
             for (let i = 0; i < 10; i++) {     
             text += res.data.results[i].primaryGenreName;
@@ -39,7 +39,7 @@ var iTunesController =  function ($scope, $http) {
     $scope.searchiTunes =  function (artist) {
     // use the jsonp callback function from the $http service this
     // will get around any limitations for cross-domain scripting.
-       $http.jsonp('http://itunes.apple.com/search', 
+       $http.jsonp('https://itunes.apple.com/search', 
         {
         params: {  
         'data-ype': 'jsonp', 
