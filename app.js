@@ -9,9 +9,9 @@ app.set('views','views')
 app.set('view engine', 'ejs')
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'origin');
+    res.setHeader('Access-Control-Allow-Origin', 'https://get--media.herokuapp.com');
     res.header('Access-Control-Allow-Origin', '*');
-    res.header("Access-Control-Allow-Headers", "origin, X-Requested-With, Content-Type, Accept, Authorization");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE"); 
     next();
 });        

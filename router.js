@@ -9,7 +9,9 @@ router.use(
          origin:[
              'http://localhost:5600',
              'https://get--media.herokuapp.com',
+             'https://get--media.herokuapp.com/',
              'get--media.herokuapp.com',
+             'get--media.herokuapp.com/',
              'https://git.heroku.com/get--media.git',
          ]
         })
@@ -18,8 +20,6 @@ router.use(
 router.get('/', function(req, res) {
     res.set('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Origin', 'origin');
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader("Access-Control-Allow-Credentials", "true");
     res.header("Access-Control-Allow-Origin", "https://get--media.herokuapp.com")
     res.header("Access-Control-Allow-Origin", "get--media.herokuapp.com")
     res.header("Access-Control-Allow-Credentials", "true");
