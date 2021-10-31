@@ -15,6 +15,7 @@ var iTunesGenre = async () => {
             const config = {
                 headers: {
                     'Accept': 'application/json',
+                    'Access-Control-Allow-Origin': 'origin',
                     'Access-Control-Allow-Origin': 'https://get--media.herokuapp.com',
                     'Access-Control-Allow-Origin': 'get--media.herokuapp.com',
                     'Access-Control-Allow-Headers': 'Content-Type, Authorization',

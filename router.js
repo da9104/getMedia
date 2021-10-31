@@ -17,6 +17,7 @@ router.use(
 
 router.get('/', function(req, res) {
     res.set('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', 'origin');
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader("Access-Control-Allow-Credentials", "true");
     res.header("Access-Control-Allow-Origin", "https://get--media.herokuapp.com")
