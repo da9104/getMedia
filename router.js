@@ -7,7 +7,6 @@ router.use(
     cors({
          credentials: true,
          origin:[
-             '*',
              'http://localhost:5600',
              'https://get--media.herokuapp.com',
              'get--media.herokuapp.com',

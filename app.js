@@ -10,16 +10,13 @@ app.set('view engine', 'ejs')
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Origin', '*');
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     res.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE"); 
     next();
 });        
 
-
 const corsOptions = {
-    origin: [
-        '*',
+    Origin: [
         'http://localhost:5600',
         'https://get--media.herokuapp.com',
         'https://get--media.herokuapp.com/',
@@ -28,7 +25,7 @@ const corsOptions = {
         'https://git.heroku.com/get--media.git',
         'git.heroku.com/get--media.git'
     ],
-    credentials: true,
+    Credentials: true,
 }
 
 app.use(cors(corsOptions));
