@@ -5,6 +5,7 @@
       font.rel = 'stylesheet';
       font.href = './assets/font/gotham-ultra.ttf';
       font.type = 'font/ttf';
+      font.mimeType = "font/ttf"
       font.onload = () => document.body.classList.add('wf-active');
       document.head.appendChild(font);
  })();
