@@ -9,7 +9,8 @@ router.use(
          origin:[
              '*',
              'http://localhost:5500',
-             'http://localhost:5600'
+             'http://localhost:5600',
+             'https://get--media.herokuapp.com/'
          ]
         })
         );
