@@ -191,11 +191,13 @@ nav ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 350px;
+  width: 390px;
   background-color: white;
-  padding: 10px 20px 10px 20px;
-  border-radius: 25px;
-  border: 1px solid black;
+  padding: 20px 30px 15px 30px;
+  border-radius: 30px;
+  border: 0px solid black;
+  -webkit-box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06);
 }
 
 .hero--searchBar-frame input[type=search] {
