@@ -30,25 +30,46 @@
  this body to iTunesController -->
  <div ng-controller="iTunesController">
 
-    <div id="genre">
-    </div>    
+   <div class="hero">
+          
+      <div class="hero--header">
+            <h1>
+               A new way to discover your music
+            </h1>
+            <p>
+               Proident velit id excepteur aute Lorem id.
+            </p>
 
- <!-- show an error if there's a search error -->
- {{ error }}
- <!-- add form, use ng-submit directive to call
- searchiTunes, pass the artist -->
- <form action="#" name="search" ng-submit="searchiTunes(artist)">
+            <div class="hero--menu">
+               <a href="#">Learn More</a>
+               <a href="#">Streaming Now <i class="fas fa-caret-right"></i> </a>
 
- <!-- Artist/band name required, use the ng-model 
- directive to pass the artist name back into the
- controller/model -->
- <input id="searchField" type="search" required ng-model="artist"  placeholder="&#xF002; Search" style="font-family: Arial, 'FontAwesome'"/>
+            </div>
+         </div>
 
- <!-- <i class="fa fa-search"></i> -->
 
- <button type="submit" value="Search"/>
- <i class="fas fa-play"></i></button>
- </form>
+<div class="hero--searchBar">
+
+    <!-- show an error if there's a search error -->
+    {{ error }}
+    <!-- add form, use ng-submit directive to call
+    searchiTunes, pass the artist -->
+    <form action="#" name="search" ng-submit="searchiTunes(artist)">
+    <!-- Artist/band name required, use the ng-model 
+    directive to pass the artist name back into the
+    controller/model -->
+    <input id="searchField" type="search" required ng-model="artist"  placeholder="&#xF002; Search" style="font-family: Arial, 'FontAwesome'"/>
+    <!-- <i class="fa fa-search"></i> -->
+    <button type="submit" value="Search"/>SEARCH</button>
+    </form>
+
+</div> <!-- hero--searchBar -->
+
+</div> <!-- hero -->
+
+
+
+
  <!-- ng-show directive to decide when to show results.
  In this case, we will show the songs when there
  are songs to show. -->

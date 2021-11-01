@@ -21,11 +21,9 @@
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0em, black 3.75em);
 }
 
-html.wf-active {
-  font-family: "gotham_ultraregular", "sans serif";
-}
-
 * {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -39,13 +37,14 @@ body {
   width: 30px;
   height: 30px;
   margin-left: 20px;
+  margin-top: 3px;
 }
 
 #brand {
   font-family: "gotham_ultraregular";
   color: #29235C;
   text-align: center;
-  margin-top: 2px;
+  margin-top: 3px;
   margin-left: 10px;
 }
 
@@ -59,6 +58,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 10px;
 }
 
 nav {
@@ -79,6 +79,7 @@ nav ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-top: 20px;
 }
 
 nav ul li {
@@ -132,6 +133,53 @@ nav ul li {
   background: #fff;
 }
 
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 50px;
+  padding: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero h1 {
+  font-family: 'GothamRounded-Bold';
+}
+
+.hero p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.hero a {
+  text-decoration: none;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+
+.hero a:first-child {
+  border-radius: 35px;
+  border: 1px solid #B7B8F1;
+  padding: 10px 40px 10px 40px;
+  background-color: #B7B8F1;
+}
+
+.hero i {
+  color: gray;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 100%;
+  border: 1px solid gray;
+  margin-top: 0;
+  padding: 6px 10px 6px 10px;
+}
+
 #contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -153,6 +201,7 @@ nav ul li {
   text-align: center;
   font-weight: 500;
   color: #6F6F6F;
+  margin-top: 10px;
 }
 
 #contact a {
@@ -162,6 +211,8 @@ nav ul li {
   border-radius: 45px;
   padding: 20px;
   margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   font-size: 1.5rem;
   font-family: 'GothamRounded-Bold';
   text-decoration: none;
@@ -171,6 +222,7 @@ nav ul li {
   font-family: 'Work Sans' !important;
   color: #6F6F6F;
   padding-left: 180px;
+  margin-bottom: 20px;
 }
 
 #contact--formfield {
@@ -279,6 +331,7 @@ footer p {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  margin-right: 20px;
 }
 
 footer ul, footer li {

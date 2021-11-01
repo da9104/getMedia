@@ -42,8 +42,12 @@ var getGenre = async () => {
     setTimeout(() => {
     document.querySelector('#genre').innerHTML = `${genres}`;
     },3)
-}
 
+    // const newSpan = document.createElement('span');
+    // newSpan.setAttribute('class','box sub');
+    // genres.append(newSpan);
+
+}
 getGenre();
 
 
@@ -51,6 +55,7 @@ getGenre();
 // defined in itunes_controller.js
 // ensure the controller gets the view's scope and the http service.
 var iTunesController =  function ($scope, $http) {
+    
     // define the search function called by the form.
     $scope.searchiTunes =  function (artist) {
     // use the jsonp callback function from the $http service this
@@ -64,7 +69,8 @@ var iTunesController =  function ($scope, $http) {
         }
     // returns a promise. when returned, .then perform action..
         }).then(onSearchComplete, onError)
-        console.log($scope)
+       
+       //  console.log($scope)
     }
    
     // Get the data out of the response when search succeeds.
