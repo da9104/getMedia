@@ -41,7 +41,7 @@ var getGenre = async () => {
     const genres = await iTunesGenre();
     setTimeout(() => {
     document.querySelector('#genre').innerHTML = genres;
-    $("#genre span:last-child").append("<button id='listButtonAdd'> Button</button>");
+    $("#genre span:last-child:after").append("<button id='listButtonAdd'> Button</button>");
     },3)
 
 }
