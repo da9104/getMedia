@@ -43,8 +43,6 @@ var getGenre = async () => {
     document.querySelector('#genre').innerHTML = `${genres}`;
     },3)
 
-    $("#genre span:last-child").append("<button id='listButtonAdd'> Button</button>");
-
 }
 getGenre();
 
