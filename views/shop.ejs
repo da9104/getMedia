@@ -16,12 +16,27 @@
       console.log("clicked")
       var $this = $(this),
          $ul = $this.parent().find('> ul');
+         $arrow = $('.fa-chevron-down')
+         $ul.toggle();
 
-        $ul.toggle();
+         if ($('#voucher').on('click')) {
+            console.log('?')
+            $arrow.toggleClass("rotate");
+         }
 
    });
 
    </script>
+
+         <style>
+            .rotate {
+               -webkit-transform: rotate(180deg);
+               -moz-transform: rotate(180deg);
+               -ms-transform: rotate(180deg);
+               -o-transform: rotate(180deg);
+               transform: rotate(180deg);
+            }
+          </style>
 
 </head>
 <body ng-controller="iTunesController">
@@ -61,7 +76,7 @@
           <ul class="children">
             <li id="product_61">
               <input class="wcv_category_check" value="61" type="checkbox" name="product_cat[]" id="in-product_61" data-parsley-multiple="product_cat">
-              <label class="selectit" for="in-product_61">iTunes</label>
+              <label class="selectit" for="in-product_61">iTunes <span style="font-size: 12px; font-weight: 600; color:gray;">(3)</span></label>
           </li>
        </ul>
       </aside>

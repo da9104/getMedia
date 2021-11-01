@@ -353,6 +353,11 @@ footer {
   align-self: center;
   justify-content: center;
   flex-basis: 20%;
+  
+  a {
+    text-decoration: none;
+    color: gray;
+  }
 
 }
 
