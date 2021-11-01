@@ -270,8 +270,13 @@ footer {
 
 /* search page */
 
-#search {
+#genre {
+  margin-right: 15px;
+  align-items: center;
+  justify-content: center;
+}
 
+#search {
   display: flex;
   flex-direction: column;
   justify-content: center;

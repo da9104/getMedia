@@ -28,7 +28,7 @@ var iTunesGenre = async () => {
             const res = await axios.get(`https://itunes.apple.com/search?term=lew&entity=album`, config)
             let text = "";
             for (let i = 0; i < 10; i++) {     
-            text += `<span style="margin-right:15px; margin: 0 auto; border: 1px solid gray; border-radius: 25px; ">${res.data.results[i].primaryGenreName}</span>`
+            text += `<span id="genre" style="margin: 0 auto; border: 1px solid gray; border-radius: 25px; ">${res.data.results[i].primaryGenreName}</span>`
         }
         return text;
     }

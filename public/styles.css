@@ -293,6 +293,16 @@ footer ul, footer li {
 }
 
 /* search page */
+#genre {
+  margin-right: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #search {
   display: -webkit-box;
   display: -ms-flexbox;
