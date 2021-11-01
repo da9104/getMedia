@@ -13,21 +13,20 @@
    <script>
 
    $(document).on('click', '#voucher', function() {
-      console.log("clicked")
+      //console.log("clicked")
       var $this = $(this),
          $ul = $this.parent().find('> ul');
          $arrow = $('.fa-chevron-down')
          $ul.toggle();
 
          if ($('#voucher').on('click')) {
-            console.log('?')
+           // console.log('?')
             $arrow.toggleClass("rotate");
          }
 
    });
 
    </script>
-
          <style>
             .rotate {
                -webkit-transform: rotate(180deg);
