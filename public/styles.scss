@@ -271,9 +271,15 @@ footer {
 /* search page */
 
 #genre {
-  margin-right: 15px;
+ 
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  span {
+    margin-right: 15px;
+  }
 }
 
 #search {
