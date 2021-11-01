@@ -58,7 +58,6 @@
  this body to iTunesController -->
  <div id="search">
 
-
    <h2>
       Let’s start deep dive
    </h2>
@@ -66,29 +65,31 @@
    <p> browse popular songs or search your favorite songs </p>
 
        <div id="genre" class="linear-fade"> 
+          <!-- <li> btn </li> -->
        </div>    
+
+       <div id="font--cover">
+
+       </div>
 
  <!-- show an error if there's a search error -->
  {{ error }}
 
-
- <div ng-show="songs">
- <div ng-repeat="song in songs">
+   <div class="search--cards linear-fade-right" ng-show="songs">
+       <div class="search--card" ng-repeat="song in songs">
  <!-- ng-src lets you load imgs when data
  is present. -->
- <div><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></div>
- <div>{{song.trackName}}</div>
- <div>{{song.artistName}}</div>
- <div><a href="{{song.previewUrl}}">Play</a></div>
- <div>&#163;{{song.collectionPrice}}</div>
+         <div class="search--card-img"><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></div>
+         
+         <div>{{song.trackName}}</div>
+         <div>{{song.artistName}}</div>
+         <div><a href="{{song.previewUrl}}">Play</a></div>
+         <div>&#163;{{song.collectionPrice}}</div>
 
- </tr>
-</div>
-</div>
+         </div>
+      </div>
 
 </div> 
-
-
 
 <footer>
 

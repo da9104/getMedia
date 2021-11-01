@@ -21,11 +21,22 @@
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0em, black 3.75em);
 }
 
+.linear-fade-right {
+  mask-image: -webkit-gradient(linear, right top, left top, color-stop(0em, rgba(0, 0, 0, 0)), color-stop(3.75em, black));
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0em, black 3.75em);
+  -webkit-mask-image: -webkit-gradient(linear, right top, left top, color-stop(0em, rgba(0, 0, 0, 0)), color-stop(3.75em, black));
+  -webkit-mask-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0em, black 3.75em);
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
 }
 
 body {
@@ -127,6 +138,9 @@ nav ul li {
 }
 
 .hero {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -139,6 +153,9 @@ nav ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100%;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 
 .hero h1 {
@@ -342,6 +359,7 @@ textarea {
 }
 
 footer {
+  bottom: 0;
   margin-top: 45px;
   padding: 10px;
   background-color: #EEEEEE;
@@ -655,5 +673,25 @@ footer ul, footer li {
   border-radius: 45px;
   padding: 10px 35px 10px 35px;
   font-family: 'Work Sans';
+}
+
+.search--cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 60px;
+  padding: 30px;
+}
+
+.search--card {
+  border: 1px solid black;
+  border-radius: 25px;
+  padding: 20px;
+  margin-right: 10px;
+  height: 40%;
 }
 /*# sourceMappingURL=styles.css.map */
