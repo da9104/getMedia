@@ -431,4 +431,116 @@ footer ul, footer li {
   padding: 10px 25px 10px 25px;
   font-family: 'Work Sans';
 }
+
+.checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+.checkout p {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.checkout ul, .checkout li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-right: 5px;
+}
+
+.checkout input {
+  border: 0;
+  border-bottom: 1px solid gray;
+}
+
+.checkout--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.checkout--forms {
+  border-radius: 25px;
+  border: 1px solid gray;
+  padding: 50px 90px 50px 90px;
+  width: 750px;
+}
+
+.checkout--forms #card--name {
+  width: 99%;
+  margin-bottom: 25px;
+}
+
+.checkout--forms #card--num {
+  width: 43%;
+}
+
+.checkout--address input {
+  width: 49%;
+  margin-bottom: 20px;
+}
+
+.checkout--personal {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.checkout--personal input {
+  width: 99%;
+  margin-bottom: 20px;
+}
+
+.checkout--footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 30px;
+}
+
+.checkout--footer a {
+  text-decoration: none;
+}
+
+.checkout--footer button {
+  color: white;
+  background-color: #29235C;
+  border: 0;
+  border-radius: 45px;
+  padding: 10px 35px 10px 35px;
+  font-family: 'Work Sans';
+}
 /*# sourceMappingURL=styles.css.map */

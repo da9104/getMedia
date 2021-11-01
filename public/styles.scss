@@ -306,8 +306,9 @@ footer {
 .category {
  display: flex;
  flex-direction: row ;
-justify-content: center;
-margin-top: 50px;
+ justify-content: center;
+ margin-top: 50px;
+
 }
 
 .category-voucher {
@@ -368,6 +369,97 @@ margin-top: 50px;
     border: 1px solid gray;
     border-radius: 45px;
     padding: 10px 25px 10px 25px;
+    font-family: 'Work Sans';
+  }
+}
+
+
+.checkout {
+
+  display: flex;
+  flex-direction: row ;
+  justify-content: center;
+  margin-top: 50px;
+  // padding: 20px;
+
+  p {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  ul,li {
+    display: flex;
+    flex-direction: row;
+   // justify-content: flex-end;
+     margin-right: 5px;
+  }
+
+  input {
+    border: 0;
+    border-bottom: 1px solid gray;
+
+  }
+
+}
+
+.checkout--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.checkout--forms {
+  border-radius: 25px;
+  border: 1px solid gray;
+  padding: 50px 90px 50px 90px;
+  width: 750px;
+
+  #card--name {
+    width: 99%;
+    margin-bottom: 25px;
+  }
+
+  #card--num {
+    width: 43%;
+  }
+
+}
+
+.checkout--address {
+  input {
+    width: 49%;
+    margin-bottom:20px;
+  }
+}
+
+.checkout--personal {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    width: 99%;
+    margin-bottom: 20px;
+  }
+
+}
+
+.checkout--footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    color: white;
+    background-color: #29235C;
+    border: 0;
+    border-radius: 45px;
+    padding: 10px 35px 10px 35px;
     font-family: 'Work Sans';
   }
 }
