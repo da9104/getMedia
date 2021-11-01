@@ -403,6 +403,10 @@ footer ul, footer li {
           justify-content: center;
 }
 
+.list--card-main strong {
+  color: gray;
+}
+
 .list--card-arrow {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -412,6 +416,7 @@ footer ul, footer li {
           justify-content: center;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
+  text-align: right;
 }
 
 .list--card-arrow a {
@@ -453,7 +458,8 @@ footer ul, footer li {
 
 .checkout p {
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
+  color: gray;
 }
 
 .checkout ul, .checkout li {
@@ -485,6 +491,10 @@ footer ul, footer li {
           justify-content: space-between;
 }
 
+#cardCompany i {
+  font-size: 1.9rem;
+}
+
 .checkout--forms {
   border-radius: 25px;
   border: 1px solid gray;
@@ -499,6 +509,7 @@ footer ul, footer li {
 
 .checkout--forms #card--num {
   width: 43%;
+  margin-bottom: 30px;
 }
 
 .checkout--address input {
@@ -538,6 +549,13 @@ footer ul, footer li {
 
 .checkout--footer a {
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: gray;
+  font-size: 12px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .checkout--footer button {

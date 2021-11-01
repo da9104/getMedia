@@ -346,6 +346,10 @@ footer {
   flex-basis: 80%;
   align-items: center;
   justify-content: center;
+
+  strong {
+    color: gray;
+  }
 }
 
 .list--card-arrow {
@@ -353,8 +357,10 @@ footer {
   align-self: center;
   justify-content: center;
   flex-basis: 20%;
+  text-align: right;
   
   a {
+    //text-align: right;
     text-decoration: none;
     color: gray;
   }
@@ -389,7 +395,8 @@ footer {
 
   p {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
+    color: gray;
   }
 
   ul,li {
@@ -413,6 +420,10 @@ footer {
   justify-content: space-between;
 }
 
+#cardCompany i {
+ font-size: 1.9rem;
+}
+
 .checkout--forms {
   border-radius: 25px;
   border: 1px solid gray;
@@ -426,6 +437,7 @@ footer {
 
   #card--num {
     width: 43%;
+    margin-bottom: 30px;
   }
 
 }
@@ -449,6 +461,9 @@ footer {
 
 }
 
+
+
+
 .checkout--footer {
   display: flex;
   flex-direction: row;
@@ -457,6 +472,11 @@ footer {
 
   a {
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: gray;
+    font-size: 12px;
+    align-self: center;
   }
 
   button {
