@@ -43,9 +43,7 @@ var getGenre = async () => {
     document.querySelector('#genre').innerHTML = `${genres}`;
     },3)
 
-    // const newSpan = document.createElement('span');
-    // newSpan.setAttribute('class','box sub');
-    // genres.append(newSpan);
+    $("span:last-child").append(" <button id='listButtonAdd'> Button</button>");
 
 }
 getGenre();
