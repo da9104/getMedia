@@ -126,13 +126,6 @@ nav ul li {
   border-radius: 25px;
 }
 
-#searchField {
-  border: 1px solid #444;
-  border-radius: 25px;
-  padding: 9px;
-  background: #fff;
-}
-
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -178,6 +171,48 @@ nav ul li {
   border: 1px solid gray;
   margin-top: 0;
   padding: 6px 10px 6px 10px;
+}
+
+#searchField {
+  border: 0px solid #444;
+  border-bottom: 1px solid #444;
+  padding: 9px;
+  background: #fff;
+}
+
+.hero--searchBar-frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 350px;
+  background-color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 25px;
+  border: 1px solid black;
+}
+
+.hero--searchBar-frame input[type=search] {
+  width: 65%;
+  padding: 9px;
+  border: 0px solid white;
+  background-color: #EEEEEE;
+  margin-right: 15px;
+}
+
+.hero--searchBar-frame button[type=submit] {
+  color: white;
+  background-color: #29235C;
+  border: 0;
+  border-radius: 45px;
+  padding: 10px 35px 10px 35px;
+  font-family: 'Work Sans';
 }
 
 #contact {
