@@ -1,32 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;900&display=swap");
-@import url("http://fonts.cdnfonts.com/css/gotham?styles=17594");
-@import url("http://fonts.cdnfonts.com/css/gotham-rounded?styles=36541,36543,36545");
 @font-face {
-  font-family: "Gotham Ultra";
-  src: url(http://fonts.cdnfonts.com/css/gotham);
-  font-display: swap;
-  font-weight: 500;
+  font-family: 'gotham_ultraregular';
+  src: url("./assets/font/gotham-ultra-webfont.woff2") format("woff2"), url("./assets/font/gotham-ultra-webfont.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Gotham Rounded";
-  src: url(http://fonts.cdnfonts.com/css/gotham-rounded?styles=36541,36543,36545);
-  font-display: swap;
-  font-weight: 300;
+  font-family: 'GothamRounded-Bold';
+  src: url("./assets/font/GothamRounded-Bold.woff") format("woff"), url("./assets/font/GothamRounded-Bold.woff2") format("woff2"), url("./assets/font/GothamRounded-Bold.eot"), url("./assets/font/GothamRounded-Bold.eot?#iefix") format("embedded-opentype"), url("./assets/font/GothamRounded-Bold.otf") format("truetype");
+  font-weight: normal;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Gotham Rounded";
-  src: url(http://fonts.cdnfonts.com/css/gotham-rounded?styles=36541,36543,36545);
   font-display: swap;
-  font-weight: 400;
-  font-style: normal;
 }
 
 html.wf-active {
-  font-family: "Gotham Ultra", "sans serif";
+  font-family: "gotham_ultraregular", "sans serif";
 }
 
 * {
@@ -46,7 +35,7 @@ body {
 }
 
 #brand {
-  font-family: "Gotham ultra";
+  font-family: "gotham_ultraregular";
   color: #29235C;
   text-align: center;
   margin-top: 2px;
@@ -148,8 +137,7 @@ nav ul li {
 }
 
 #contact h2 {
-  font-family: 'Gotham Rounded';
-  font-weight: 400;
+  font-family: 'GothamRounded-Bold';
   text-align: center;
   margin: 100px auto 0;
 }
@@ -169,8 +157,7 @@ nav ul li {
   padding: 20px;
   margin: 0 auto;
   font-size: 1.5rem;
-  font-family: 'Gotham Rounded';
-  font-weight: 300;
+  font-family: 'GothamRounded-Bold';
   text-decoration: none;
 }
 
