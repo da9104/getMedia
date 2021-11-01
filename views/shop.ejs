@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
- <head> 
+ <head>
  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
  <title>AngularJS iTunes</title>
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js"></script>
  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
  <script src="https://kit.fontawesome.com/93d605acff.js" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
  <link rel="stylesheet" href="./styles.css" media='all' rel='stylesheet' type='text/css' >
- </head>
-<body>
+ 
+   <script>
 
+   $(document).on('click', '#voucher', function() {
+      console.log("clicked")
+      var $this = $(this),
+         $ul = $this.parent().find('> ul');
 
+        $ul.toggle();
+
+   });
+
+   </script>
+
+</head>
+<body ng-controller="iTunesController">
 <nav>
-
    <div class="brand">
-      <img src="./assets/images/logo.png" alt="logo" id="logo">
-      <span id="brand"> GETMEDIA </span>  
+      <a href="/"><img src="./assets/images/logo.png" alt="logo" id="logo"></a>     
+   </div>
+
+   <div class="nav--search">
+      <form action="#" name="search" ng-submit="searchiTunes(artist)">
+         <!-- Artist/band name required, use the ng-model 
+         directive to pass the artist name back into the
+         controller/model -->
+         <input type="search" required ng-model="artist"  placeholder="&#xF002; Search" style="font-family: Arial, 'FontAwesome'"/>
+         <!-- <i class="fa fa-search"></i> -->
+         <button type="submit" value="Search"/><i class="fas fa-play"></i></button>
+         </form>
    </div>
 
    <ul>
@@ -29,63 +51,125 @@
 
  <!-- use the ng-controller directive to scope
  this body to iTunesController -->
- <div ng-controller="iTunesController">
+ <div>
 
-    <div id="genre">
-    </div>    
+   <div class="category">
+
+      <aside class="category-voucher">
+       <ul class="list_style"> 
+          <li id="voucher"> Voucher <i class="fas fa-chevron-down"></i></li>
+          <ul class="children">
+            <li id="product_61">
+              <input class="wcv_category_check" value="61" type="checkbox" name="product_cat[]" id="in-product_61" data-parsley-multiple="product_cat">
+              <label class="selectit" for="in-product_61">iTunes</label>
+          </li>
+       </ul>
+      </aside>
+   
+
+      <aside class="category-voucher--list linear-fade" >
+         <div class="list--card">
+            <div class="list--card-main">
+               <p>
+                  <strong> Voucher </strong>
+               </p>
+              <p>
+               iTunes $5 gift card
+              </p> 
+            </div>
+            
+            <div class="list--card-arrow">
+               <i class="fas fa-arrow-right"></i>
+            </div>
+
+         </div>
+         <div class="list--card">
+            <div class="list--card-main">
+               <p>
+                  <strong> Voucher </strong>
+               </p>
+              <p>
+               iTunes $5 gift card
+              </p> 
+            </div>
+            
+            <div class="list--card-arrow">
+               <i class="fas fa-arrow-right"></i>
+            </div>
+
+         </div>
+         <div class="list--card">
+            <div class="list--card-main">
+               <p>
+                  <strong> Voucher </strong>
+               </p>
+              <p>
+               iTunes $5 gift card
+              </p> 
+            </div>
+            
+            <div class="list--card-arrow">
+               <i class="fas fa-arrow-right"></i>
+            </div>
+
+         </div>
+
+
+      </aside>
+
+
+
+   
+   </div>
+
+   <div class="showmore ">
+      
+   <button type="#"> Show more  <i class="fas fa-arrow-right"></i></button> 
+
+   </div>
 
  <!-- show an error if there's a search error -->
  {{ error }}
- <!-- add form, use ng-submit directive to call
- searchiTunes, pass the artist -->
- <form action="#" name="search" ng-submit="searchiTunes(artist)">
 
- <!-- Artist/band name required, use the ng-model 
- directive to pass the artist name back into the
- controller/model -->
- <input id="searchField" type="search" required ng-model="artist"  placeholder="&#xF002; Search" style="font-family: Arial, 'FontAwesome'"/>
 
- <!-- <i class="fa fa-search"></i> -->
-
- <button type="submit" value="Search"/>
- <i class="fas fa-play"></i></button>
- </form>
- <!-- ng-show directive to decide when to show results.
- In this case, we will show the songs when there
- are songs to show. -->
-
- <table ng-show="songs">
-
- <thead>
- <tr>
- <th>Album Artwork</th>
- <th>Track</th>
- <th>Artist name</th>
- <th>Preview&nbsp;</th>
- <th>Price</th>
-
- </tr>
- </thead>
- <tbody>
- <!-- ng-repeat directive to loop over each 
- song in the songs list. -->
- <!-- The song data is loaded into objects for
- easy access. Just call on the attributes
- you need. -->
- <tr ng-repeat="song in songs">
+ <div ng-show="songs">
+ <div ng-repeat="song in songs">
  <!-- ng-src lets you load imgs when data
  is present. -->
- <td><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></td>
- <td>{{song.trackName}}</td>
- <td>{{song.artistName}}</td>
- <td><a href="{{song.previewUrl}}">Play</a></td>
- <td>{{song.collectionPrice}}</td>
-
+ <div><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></div>
+ <div>{{song.trackName}}</div>
+ <div>{{song.artistName}}</div>
+ <div><a href="{{song.previewUrl}}">Play</a></div>
+ <div>&#163;{{song.collectionPrice}}</div>
 
  </tr>
- </tbody>
- </table>
 </div>
+</div>
+
+</div> 
+
+
+
+<footer>
+
+   <p>
+      2021 (C) COPYRIGHT - GETMEDIA
+   </p>
+ 
+   <ul>
+      <li>
+         <i class="fab fa-instagram"></i>
+      </li>
+      <li>
+         <i class="fab fa-facebook"></i>
+      </li>
+      <li>
+         <i class="fab fa-twitter"></i>
+      </li>
+   </ul>
+
+
+</footer>
 
  <!-- the script which will contain the iTunesController -->
 <script src="./iTunesController.js"></script>
