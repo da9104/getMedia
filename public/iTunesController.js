@@ -42,7 +42,7 @@ var getGenre = async () => {
     setTimeout(() => {
     document.querySelector('#genre').innerHTML = genres;
     var last = $("#genre li:last-child")
-    last[0].append("<button id='listButtonAdd'> Button</button>")
+    last.appendChild("<button id='listButtonAdd'> Button</button>")
     },3)
 
 }
