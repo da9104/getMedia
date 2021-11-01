@@ -14,6 +14,13 @@
   font-display: swap;
 }
 
+.linear-fade {
+  mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(0em, rgba(0, 0, 0, 0)), color-stop(3.75em, black));
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0em, black 3.75em);
+  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(0em, rgba(0, 0, 0, 0)), color-stop(3.75em, black));
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0em, black 3.75em);
+}
+
 html.wf-active {
   font-family: "gotham_ultraregular", "sans serif";
 }
@@ -285,6 +292,17 @@ footer ul, footer li {
   margin-right: 25px;
 }
 
+/* search page */
+#search h2 {
+  font-family: 'GothamRounded-Bold';
+  text-align: center;
+  margin: 100px auto 0;
+}
+
+#search p {
+  text-align: center;
+}
+
 /* Shop page */
 .category {
   display: -webkit-box;
@@ -344,16 +362,23 @@ footer ul, footer li {
 .list--card-main {
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
-}
-
-.list--card-arrow {
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -ms-flex-line-pack: end;
-      align-content: flex-end;
+}
+
+.list--card-arrow {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 
 .showmore button {
@@ -372,12 +397,5 @@ footer ul, footer li {
   border-radius: 45px;
   padding: 10px 25px 10px 25px;
   font-family: 'Work Sans';
-}
-
-.linear-fade {
-  mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(0em, rgba(0, 0, 0, 0)), color-stop(3.75em, black));
-  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0em, black 3.75em);
-  -webkit-mask-image: -webkit-gradient(linear, left bottom, left top, color-stop(0em, rgba(0, 0, 0, 0)), color-stop(3.75em, black));
-  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 0em, black 3.75em);
 }
 /*# sourceMappingURL=styles.css.map */

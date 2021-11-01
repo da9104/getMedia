@@ -31,6 +31,9 @@ router.get('/search', function(req, res) {
 router.get('/shop', function(req, res) {
     res.render('shop')
 })
+router.get('/checkout', function(req, res) {
+    res.render('checkout')
+})
 router.get('/contact', function(req, res) {
     res.render('contact')
 })
