@@ -28,7 +28,7 @@ var iTunesGenre = async () => {
             const res = await axios.get(`https://itunes.apple.com/search?term=lew&entity=album`, config)
             let text = "";
             for (let i = 0; i < 10; i++) {     
-            text += `<span id="genre" style="margin: 0 auto; border-radius: 25px; ">${res.data.results[i].primaryGenreName}</span>`
+            text += `<li style="list-style: none; margin: 0 auto; border-radius: 25px; ">${res.data.results[i].primaryGenreName}</li>`
         }
         return text;
     }
@@ -41,7 +41,7 @@ var getGenre = async () => {
     const genres = await iTunesGenre();
     setTimeout(() => {
     document.querySelector('#genre').innerHTML = genres;
-    $("#genre span:last-child:after").append("<button id='listButtonAdd'> Button</button>");
+    $("#genre li:last-child").append("<button id='listButtonAdd'> Button</button>");
     },3)
 
 }
