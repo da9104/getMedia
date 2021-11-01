@@ -40,7 +40,7 @@ var iTunesGenre = async () => {
 var getGenre = async () => {
     const genres = await iTunesGenre();
     setTimeout(() => {
-    document.querySelector('#genre').innerHTML = genres;
+    document.querySelector('#genre').innerHTML = `<span style="margin-right:15px; margin: 0 auto; border: 1px solid gray; border-radius: 25px; ">${genres}</span>`;
     },3)
 }
 

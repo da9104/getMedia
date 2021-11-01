@@ -272,6 +272,10 @@ footer {
 
 #search {
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   h2 {
     font-family: 'GothamRounded-Bold';
     text-align: center;
