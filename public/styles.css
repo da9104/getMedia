@@ -156,6 +156,57 @@ nav ul li {
   width: 100%;
   margin-top: 150px;
   margin-bottom: 150px;
+  -webkit-animation: fade 0.5s ease-in-out forwards;
+          animation: fade 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes pop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.hero--searchBar {
+  -webkit-animation: pop 0.5s ease-in-out forwards;
+          animation: pop 0.5s ease-in-out forwards;
 }
 
 .hero h1 {

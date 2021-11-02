@@ -158,6 +158,34 @@ nav ul li {
   width: 100%;
   margin-top: 150px;
   margin-bottom: 150px;
+  animation: fade 0.5s ease-in-out forwards;
+}
+
+@keyframes fade {
+  from {
+    opacity : 0;
+    // transform:translateX(-200px);
+  }
+  to {
+    opacity: 1;
+   // transform:translateX(0);
+  }
+}
+
+@keyframes pop {
+  from { 
+    opacity: 0;
+    transform:translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform:translateY(0px);
+  }
+}
+
+.hero--searchBar {
+  animation: pop 0.5s ease-in-out forwards;
+
 }
 
 .hero h1 {
