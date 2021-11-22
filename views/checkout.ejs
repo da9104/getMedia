@@ -9,7 +9,11 @@
  <script src="https://kit.fontawesome.com/93d605acff.js" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
  <link rel="stylesheet" href="./styles.css" media='all' rel='stylesheet' type='text/css' >
- 
+ <style>
+   table {
+      margin: 0 auto;
+   }
+</style>
    <script>
 
    $(document).on('click', '#voucher', function() {
@@ -50,7 +54,6 @@
 </nav>
 
  <section>
-
    <div class="checkout">
 
          <div class="checkout--forms">
@@ -108,46 +111,55 @@
  <!-- show an error if there's a search error -->
  {{ error }}
 
+ <table ng-show="songs" class="search--results">
 
- <div ng-show="songs">
- <div ng-repeat="song in songs">
- <!-- ng-src lets you load imgs when data
- is present. -->
- <div><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></div>
- <div>{{song.trackName}}</div>
- <div>{{song.artistName}}</div>
- <div><a href="{{song.previewUrl}}">Play</a></div>
- <div>&#163;{{song.collectionPrice}}</div>
-
- </tr>
-</div>
-</div>
+   <thead>
+   <tr>
+   <th>Album Artwork</th>
+   <th>Track</th>
+   <th>Artist name</th>
+   <th>Preview&nbsp;</th>
+   <th>Price</th>
+  
+   </tr>
+   </thead>
+   <tbody>
+   <!-- ng-repeat directive to loop over each 
+   song in the songs list. -->
+   <!-- The song data is loaded into objects for
+   easy access. Just call on the attributes
+   you need. -->
+   <tr ng-repeat="song in songs">
+   <!-- ng-src lets you load imgs when data
+   is present. -->
+     <td><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></td>
+     <td>{{song.trackName}}</td>
+     <td>{{song.artistName}}</td>
+     <td><a href="{{song.previewUrl}}">Play</a></td>
+     <td>{{song.collectionPrice}}</td>
+  
+  
+     </tr>
+     </tbody>
+     </table>
 
  </section> 
-
-
-
-<footer>
-
+ <footer>
    <p>
       2021 (C) COPYRIGHT - GETMEDIA
    </p>
- 
    <ul>
       <li>
-         <i class="fab fa-instagram"></i>
+        <a href="#"> <i class="fab fa-instagram"></i> </a>
       </li>
       <li>
-         <i class="fab fa-facebook"></i>
+         <a href="#">  <i class="fab fa-facebook"></i> </a>
       </li>
       <li>
-         <i class="fab fa-twitter"></i>
+         <a href="#">  <i class="fab fa-twitter"></i> </a>
       </li>
    </ul>
-
-
-</footer>
-
+   </footer>
  <!-- the script which will contain the iTunesController -->
 <script src="./iTunesController.js"></script>
 

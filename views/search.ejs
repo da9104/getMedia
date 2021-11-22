@@ -64,12 +64,12 @@
 
  </style>
  
-</head>
-<body ng-controller="iTunesController">
-<nav>
-   <div class="brand">
+   </head>
+   <body ng-controller="iTunesController">
+   <nav>
+      <div class="brand">
       <a href="/"><img src="./assets/images/logo.png" alt="logo" id="logo"></a>     
-   </div>
+       </div>
 
    <div class="nav--search">
       <form action="#" name="search" ng-submit="searchiTunes(artist)">
@@ -88,7 +88,7 @@
       <li><a href="/shop">SHOP</a></li>
       <li><a href="/contact">CONTACT</a></li>
    </ul>   
-</nav>
+   </nav>
 
  <!-- use the ng-controller directive to scope
  this body to iTunesController -->
@@ -101,48 +101,59 @@
        <div id="wrapper">
        <div id="genre" class="linear-fade"></div>    
        <div id="front"> </div>
-      </div>
+    </div>
  <!-- show an error if there's a search error -->
  {{ error }}
 
-   <div class="search--cards linear-fade-right" ng-show="songs">
-       <div class="search--card" ng-repeat="song in songs">
- <!-- ng-src lets you load imgs when data
- is present. -->
-         <div class="search--card-img">
-            <img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/>
-         </div>
-         <div>{{song.trackName}}</div>
-         <div>{{song.artistName}}</div>
-         <div><a href="{{song.previewUrl}}">Play</a></div>
-         <div>&#163;{{song.collectionPrice}}</div>
+   
 
-         </div>
-      </div>
+ <table ng-show="songs" class="search--results">
 
-</div> 
-
-<footer>
-
-   <p>
-      2021 (C) COPYRIGHT - GETMEDIA
-   </p>
- 
-   <ul>
-      <li>
-         <i class="fab fa-instagram"></i>
-      </li>
-      <li>
-         <i class="fab fa-facebook"></i>
-      </li>
-      <li>
-         <i class="fab fa-twitter"></i>
-      </li>
-   </ul>
-
-
-</footer>
-
+   <thead>
+   <tr>
+   <th>Album Artwork</th>
+   <th>Track</th>
+   <th>Artist name</th>
+   <th>Preview&nbsp;</th>
+   <th>Price</th>
+  
+   </tr>
+   </thead>
+   <tbody>
+   <!-- ng-repeat directive to loop over each 
+   song in the songs list. -->
+   <!-- The song data is loaded into objects for
+   easy access. Just call on the attributes
+   you need. -->
+   <tr ng-repeat="song in songs">
+   <!-- ng-src lets you load imgs when data
+   is present. -->
+     <td><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></td>
+     <td>{{song.trackName}}</td>
+     <td>{{song.artistName}}</td>
+     <td><a href="{{song.previewUrl}}">Play</a></td>
+     <td>{{song.collectionPrice}}</td>
+  
+  
+     </tr>
+     </tbody>
+     </table>
+     <footer>
+      <p>
+         2021 (C) COPYRIGHT - GETMEDIA
+      </p>
+      <ul>
+         <li>
+           <a href="#"> <i class="fab fa-instagram"></i> </a>
+         </li>
+         <li>
+            <a href="#">  <i class="fab fa-facebook"></i> </a>
+         </li>
+         <li>
+            <a href="#">  <i class="fab fa-twitter"></i> </a>
+         </li>
+      </ul>
+      </footer>
  <!-- the script which will contain the iTunesController -->
 <script src="./iTunesController.js"></script>
 

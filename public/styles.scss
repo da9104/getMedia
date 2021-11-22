@@ -457,8 +457,11 @@ footer {
   ul, li {
     display: flex;
     flex-direction: row;
-   // gap: 15px;
    margin-right: 25px;
+  }
+
+  li a i{
+    color: black;
   }
 
 }
@@ -494,6 +497,10 @@ footer {
   {
     text-align: center;
   }
+}
+
+.search--results {
+  padding: 50px;
 }
 
 
@@ -684,22 +691,6 @@ footer {
     padding: 10px 35px 10px 35px;
     font-family: 'Work Sans';
   }
-}
-
-
-.search--cards {
-  display: flex;
-  flex-direction: row;
-  margin-top: 60px;
-  padding: 30px
-}
-
-.search--card {
-  border: 1px solid black;
-  border-radius: 25px;
-  padding: 20px;
-  margin-right: 10px;
-  height: 40%;
 }
 
 

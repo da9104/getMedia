@@ -536,6 +536,10 @@ footer ul, footer li {
   margin-right: 25px;
 }
 
+footer li a i {
+  color: black;
+}
+
 /* search page */
 #genre {
   display: -webkit-box;
@@ -578,6 +582,10 @@ footer ul, footer li {
 
 #search p {
   text-align: center;
+}
+
+.search--results {
+  padding: 50px;
 }
 
 /* Shop page */
@@ -809,25 +817,5 @@ footer ul, footer li {
   border-radius: 45px;
   padding: 10px 35px 10px 35px;
   font-family: 'Work Sans';
-}
-
-.search--cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: 60px;
-  padding: 30px;
-}
-
-.search--card {
-  border: 1px solid black;
-  border-radius: 25px;
-  padding: 20px;
-  margin-right: 10px;
-  height: 40%;
 }
 /*# sourceMappingURL=styles.css.map */

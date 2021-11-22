@@ -8,6 +8,12 @@
  <script src="https://kit.fontawesome.com/93d605acff.js" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
  <link rel="stylesheet" href="./styles.css" media='all' rel='stylesheet' type='text/css' >
+   <style>
+      table {
+         margin: 0 auto;
+      }
+   </style>
+
 </head>
 <body>
 <nav>
@@ -65,16 +71,12 @@
    <p style="font-size:12px; text-align: center;"> We have already collected  <strong style="color:aqua;">2,000+</strong> records with ITunes</p>
     </form>
    </div> <!-- hero--searchBar -->
-</div> <!-- hero -->
-
-
-
+   </div> <!-- hero -->
 
  <!-- ng-show directive to decide when to show results.
  In this case, we will show the songs when there
  are songs to show. -->
-
- <table ng-show="songs">
+ <table ng-show="songs" class="search--results">
 
  <thead>
  <tr>
@@ -105,22 +107,20 @@
    </tr>
    </tbody>
    </table>
-   </div>
-
-
+ </div> <!-- wrapper -->
          <footer>
          <p>
             2021 (C) COPYRIGHT - GETMEDIA
          </p>
          <ul>
             <li>
-               <i class="fab fa-instagram"></i>
+              <a href="#"> <i class="fab fa-instagram"></i> </a>
             </li>
             <li>
-               <i class="fab fa-facebook"></i>
+               <a href="#">  <i class="fab fa-facebook"></i> </a>
             </li>
             <li>
-               <i class="fab fa-twitter"></i>
+               <a href="#">  <i class="fab fa-twitter"></i> </a>
             </li>
          </ul>
          </footer>
