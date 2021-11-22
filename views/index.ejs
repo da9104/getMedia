@@ -8,16 +8,19 @@
  <script src="https://kit.fontawesome.com/93d605acff.js" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
  <link rel="stylesheet" href="./styles.css" media='all' rel='stylesheet' type='text/css' >
- </head>
+   <style>
+      .bg {
+         /* background-image: url('./assets/images/noise.png');
+         opacity: .2; */
+      }
+   </style>
+</head>
 <body>
-
 <nav>
-
    <div class="brand">
       <a href="/"><img src="./assets/images/logo.png" alt="logo" id="logo"></a>
       <span id="brand"> GETMEDIA </span>  
    </div>
-
    <ul>
       <li><a href="/">HOME</a></li>
       <li><a href="/search">SEARCH</a></li>
@@ -25,11 +28,9 @@
       <li><a href="/contact">CONTACT</a></li>
    </ul>   
 </nav>
-
  <!-- use the ng-controller directive to scope
  this body to iTunesController -->
- <div ng-controller="iTunesController" class="bg" >
-
+ <div ng-controller="iTunesController" class="bg">
    <!-- style="background-image: url('./assets/images/noise.png');" -->
    <div class="hero">
           
@@ -42,15 +43,16 @@
             </p>
 
             <div class="hero--menu">
-               <a href="#">Learn More</a>
-               <a href="#">Streaming Now <i class="fas fa-caret-right"></i> </a>
+               <a href="#" id="learnmore">Learn More</a>
+               <a href="#" id="streaming">Streaming Now <i class="fas fa-caret-right"></i> </a>
 
             </div>
          </div>
 
 
-<div class="hero--searchBar">
+   <div class="hero--searchBar">
 
+      <img src="./assets/images/hero-1.png" alt="" id="heroimg" />
     <!-- show an error if there's a search error -->
     {{ error }}
     <!-- add form, use ng-submit directive to call
@@ -67,11 +69,8 @@
     <button type="submit" value="Search"/>SEARCH</button>
    </div>
    <p style="font-size:12px; text-align: center;"> We have already collected  <strong style="color:aqua;">2,000+</strong> records with ITunes</p>
-
     </form>
-
-</div> <!-- hero--searchBar -->
-
+   </div> <!-- hero--searchBar -->
 </div> <!-- hero -->
 
 
@@ -102,42 +101,36 @@
  <tr ng-repeat="song in songs">
  <!-- ng-src lets you load imgs when data
  is present. -->
- <td><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></td>
- <td>{{song.trackName}}</td>
- <td>{{song.artistName}}</td>
- <td><a href="{{song.previewUrl}}">Play</a></td>
- <td>{{song.collectionPrice}}</td>
+   <td><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></td>
+   <td>{{song.trackName}}</td>
+   <td>{{song.artistName}}</td>
+   <td><a href="{{song.previewUrl}}">Play</a></td>
+   <td>{{song.collectionPrice}}</td>
 
 
- </tr>
- </tbody>
- </table>
-</div>
+   </tr>
+   </tbody>
+   </table>
+   </div>
 
 
-<footer>
-
-   <p>
-      2021 (C) COPYRIGHT - GETMEDIA
-   </p>
- 
-   <ul>
-      <li>
-         <i class="fab fa-instagram"></i>
-      </li>
-      <li>
-         <i class="fab fa-facebook"></i>
-      </li>
-      <li>
-         <i class="fab fa-twitter"></i>
-      </li>
-   </ul>
-
-
-</footer>
-
+         <footer>
+         <p>
+            2021 (C) COPYRIGHT - GETMEDIA
+         </p>
+         <ul>
+            <li>
+               <i class="fab fa-instagram"></i>
+            </li>
+            <li>
+               <i class="fab fa-facebook"></i>
+            </li>
+            <li>
+               <i class="fab fa-twitter"></i>
+            </li>
+         </ul>
+         </footer>
  <!-- the script which will contain the iTunesController -->
-<script src="./iTunesController.js"></script>
-
+      <script src="./iTunesController.js"></script>
 </body>
 </html>

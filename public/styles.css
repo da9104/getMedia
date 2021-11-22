@@ -162,6 +162,8 @@ nav ul li a {
   left: 0;
   z-index: -1;
   background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
   width: 100%;
   height: 100%;
 }
@@ -183,11 +185,20 @@ nav ul li a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  height: 100%;
   margin-top: 150px;
   margin-bottom: 150px;
   -webkit-animation: fade 0.5s ease-in-out forwards;
           animation: fade 0.5s ease-in-out forwards;
   opacity: 1;
+}
+
+.hero--header, .hero--menu {
+  z-index: 10;
+}
+
+.hero--menu #learnmore {
+  color: white;
 }
 
 @-webkit-keyframes fade {
@@ -232,6 +243,41 @@ nav ul li a {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
+}
+
+@media screen and (max-width: 87px) {
+  .hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 15px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 46vh;
+  }
+  .hero--header {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero--searchBar {
+    margin: 20px auto;
+  }
+  #streaming {
+    color: white;
+  }
+}
+
+#heroimg {
+  z-index: -10;
+  width: 380px;
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  opacity: .8;
 }
 
 .hero--searchBar {
@@ -279,6 +325,7 @@ nav ul li a {
 }
 
 .hero--searchBar-frame {
+  margin-top: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -454,7 +501,6 @@ footer {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  position: absolute;
   width: 100%;
 }
 
