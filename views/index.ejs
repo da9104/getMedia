@@ -8,12 +8,6 @@
  <script src="https://kit.fontawesome.com/93d605acff.js" crossorigin="anonymous"></script>
  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css">
  <link rel="stylesheet" href="./styles.css" media='all' rel='stylesheet' type='text/css' >
-   <style>
-      .bg {
-         /* background-image: url('./assets/images/noise.png');
-         opacity: .2; */
-      }
-   </style>
 </head>
 <body>
 <nav>
@@ -28,6 +22,7 @@
       <li><a href="/contact">CONTACT</a></li>
    </ul>   
 </nav>
+<div class="wrapper">
  <!-- use the ng-controller directive to scope
  this body to iTunesController -->
  <div ng-controller="iTunesController" class="bg">
@@ -51,7 +46,6 @@
 
 
    <div class="hero--searchBar">
-
       <img src="./assets/images/hero-1.png" alt="" id="heroimg" />
     <!-- show an error if there's a search error -->
     {{ error }}
@@ -132,5 +126,7 @@
          </footer>
  <!-- the script which will contain the iTunesController -->
       <script src="./iTunesController.js"></script>
+      
+      </div>
 </body>
 </html>

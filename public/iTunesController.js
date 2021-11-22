@@ -13,7 +13,7 @@
 
 var iTunesGenre = async () => {
     try {
-            const config = {
+         const config = {
                 headers: {
                     'Accept': 'application/json',
                     'Access-Control-Allow-Origin': '*',
@@ -27,8 +27,12 @@ var iTunesGenre = async () => {
             }
             const res = await axios.get(`https://itunes.apple.com/search?term=lew&entity=album`, config)
             let text = "";
-            for (let i = 0; i < 10; i++) {     
-            text += `<li id="genres" style="list-style: none; margin: 0 auto; border-radius: 25px; ">${res.data.results[i].primaryGenreName}</li>`
+            for (let i = 0; i < 8; i++) {     
+            text += `
+            <li id="genres" style="list-style: none; margin: 0 auto; border-radius: 25px; ">
+            ${res.data.results[i].primaryGenreName}
+            </li>
+            `
         }
         return text;
     }
@@ -47,6 +51,63 @@ var getGenre = async () => {
 }
 getGenre();
 
+var iTunesFront = async () => {
+    try {
+         const config = {
+                headers: {
+                    'Accept': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Origin': 'Origin',
+                    'Access-Control-Allow-Origin': 'https://get--media.herokuapp.com',
+                    'Access-Control-Allow-Origin': 'get--media.herokuapp.com',
+                    'Access-Control-Allow-Headers': "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+                    'Access-Control-Allow-Methods': 'GET, DELETE, HEAD, OPTIONS',
+                    'Access-Control-Allow-Credentials': 'true'
+                }
+            }
+            const res = await axios.get(`https://itunes.apple.com/search?term=lew&entity=album`, config)
+            let text = "";
+            for (let i = 0; i < 5; i++) {     
+            text += 
+            `
+            <div class="front--cards">
+              <div id="front--cover" style=flex: 1 0 50%;">
+                 <div id="front--artwork">
+                 <img src=" ${res.data.results[i].artworkUrl100}" alt="" />
+                    </div>
+                <div>  ${res.data.results[i].artistName} </div>
+                <div>  ${res.data.results[i].collectionName} </div>
+                <div style="display: block; margin:0; left: 0;  padding: 10px; border-radius:15px; background-color: #C4C4C4;"> 
+                 ${res.data.results[i].primaryGenreName} 
+                 </div>
+                <hr style=" width:250px; margin: 20px 20px;"/>
+                  <div stlye="border-top:1px solid gray; display: flex; flex-direction: row;">
+                <p>
+                 Listen Apple Music
+                 <span style="padding: 10px; border-radius:15px; background-color: #21D3A9">
+                 &#163; ${res.data.results[i].collectionPrice} <i class="fas fa-chevron-down"></i> 
+                 </span>
+               </p>
+               </div>
+                 </div>
+            </div>
+            `
+                console.log(res.data.results);
+        }
+        return text;
+    }
+    catch (e) {
+        return "ERROR!"
+    }
+}
+
+var getFront = async () => {
+    const front = await iTunesFront();
+    setTimeout(() => {
+    document.querySelector('#front').innerHTML = front;
+    },3)
+}
+getFront();
 
 // create a controller named studentController
 // defined in itunes_controller.js

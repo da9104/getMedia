@@ -55,12 +55,12 @@
 }
 
 html, body {
+  margin: 0;
   height: 100%;
 }
 
 body {
   font-family: "Work Sans", "sans serif";
-  margin: 0;
 }
 
 a {
@@ -107,7 +107,7 @@ nav {
 nav ul {
   display: flex;
   flex-direction: row;
- margin-top: 20px;
+  margin-top: 20px;
 }
 nav ul li {
   margin-right: 20px;
@@ -176,13 +176,17 @@ nav ul li a {
   height: 100%;
 }
 
+// .wrapper {
+//   display: flex;
+// }
+
 .hero {
-  flex: 1 0 auto;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: row;
+  justify-content: space-between;
   margin-top: 50px;
   padding: 50px;
-  justify-content: space-between;
   width: 100%;
   height: 100%;
   margin-top: 150px;
@@ -204,11 +208,9 @@ nav ul li a {
 @keyframes fade {
   from {
     opacity : 0;
-    // transform:translateX(-200px);
   }
   to {
     opacity: 1;
-   // transform:translateX(0);
   }
 }
 
@@ -223,7 +225,7 @@ nav ul li a {
   }
 }
 
-@media screen and (max-width: 87px) { 
+@media screen and (max-width: 870px) { 
   .hero {
     flex-direction: column;
     padding: 15px;
@@ -236,26 +238,22 @@ nav ul li a {
   }
   .hero--searchBar {
     margin: 20px auto;
-    // justify-content: center;
-    // align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #streaming {
     color: white;
   }
 
 }
-
-
 #heroimg {
   z-index: -10;
   width: 380px;
   position: absolute;
-  right: 10px;
+  right: 30px;
   bottom: 20px;
   opacity: .8;
 }
-
-
 .hero--searchBar {
   animation: pop 0.5s ease-in-out forwards;
 }
@@ -304,7 +302,7 @@ nav ul li a {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 390px;
+  width: 450px;
   background-color: white;
   padding: 20px 30px 15px 30px;
   border-radius: 30px;
@@ -434,6 +432,7 @@ textarea {
 
 
 footer {
+  left: 0;
   bottom: 0;
   margin-top: 45px;
   padding: 10px;
@@ -441,7 +440,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  //position: absolute;
+  // position: absolute;
   width: 100%;
 
   p {

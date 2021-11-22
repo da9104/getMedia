@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
  <head>
+ <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
  <title>AngularJS iTunes</title>
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js"></script>
@@ -11,13 +12,11 @@
  <link rel="stylesheet" href="./styles.css" media='all' rel='stylesheet' type='text/css' >
 
  <style>
-
    #genre li:first-child {
       color: white;
       background-color: #B7B8F1;
       border: none;
    }
-
    #genre li {
       margin-top: 20px;
       padding: 5px;
@@ -25,6 +24,43 @@
       color: gray;
       background-color: #eee;
    }
+   #wrapper {
+         padding: 20px;
+      }
+   #front {
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+   }
+   #front .front--cards {
+      padding: 2.5rem;
+      background-color: #EEEEEE;
+      margin: 0 1.5rem;
+      border-radius: 25px;
+      margin-top: 20px;
+   }
+   #front .front--cards:not(:first-child) {
+      background-color: white;
+      border: 1px solid #eee;
+   }
+
+   #front--cover {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+   }
+   #front--artwork img{
+      margin: 0 auto;
+      border-radius: 30px;
+   }
+   #front--artwork img:hover {
+      opacity: .5;
+   }
+
 
  </style>
  
@@ -56,22 +92,16 @@
 
  <!-- use the ng-controller directive to scope
  this body to iTunesController -->
- <div id="search">
-
-   <h2>
+    <div id="search">
+       <h2>
       Let’s start deep dive
-   </h2>
-      
-   <p> browse popular songs or search your favorite songs </p>
+       </h2>
+       <p> browse popular songs or search your favorite songs </p>
 
-       <div id="genre" class="linear-fade"> 
-          <!-- <li> btn </li> -->
-       </div>    
-
-       <div id="font--cover">
-
-       </div>
-
+       <div id="wrapper">
+       <div id="genre" class="linear-fade"></div>    
+       <div id="front"> </div>
+      </div>
  <!-- show an error if there's a search error -->
  {{ error }}
 
@@ -79,8 +109,9 @@
        <div class="search--card" ng-repeat="song in songs">
  <!-- ng-src lets you load imgs when data
  is present. -->
-         <div class="search--card-img"><img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/></div>
-         
+         <div class="search--card-img">
+            <img ng-src="{{song.artworkUrl100}}" alt="{{song.collectionName}}"/>
+         </div>
          <div>{{song.trackName}}</div>
          <div>{{song.artistName}}</div>
          <div><a href="{{song.previewUrl}}">Play</a></div>
