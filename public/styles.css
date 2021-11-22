@@ -44,6 +44,18 @@ body {
   margin: 0;
 }
 
+a {
+  color: gray;
+}
+
+a:visited {
+  color: gray;
+}
+
+a:hover {
+  opacity: .6;
+}
+
 #logo {
   width: 30px;
   height: 30px;
@@ -96,6 +108,10 @@ nav ul {
 nav ul li {
   margin-right: 20px;
   list-style: none;
+}
+
+nav ul li a {
+  color: gray;
 }
 
 .nav--search {

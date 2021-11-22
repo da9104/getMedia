@@ -1,7 +1,6 @@
 {
   "name": "itunes",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "homepage": "https://github.com/da9104/getMedia.git",
   "dependencies": {
@@ -19,5 +18,13 @@
     "watch": "nodemon app"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/da9104/getMedia.git"
+  },
+  "bugs": {
+    "url": "https://github.com/da9104/getMedia/issues"
+  },
+  "description": ""
 }
