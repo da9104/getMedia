@@ -623,10 +623,25 @@ footer {
   .category {
     display: flex;
     flex-direction: column;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  .category-voucher, .list_style ul li {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .linear-fade {
+    flex-grow: 0;
+    flex-shrink: 0;
   }
   .category-voucher--list {
-    justify-content: center;
+    
+    align-items: center;
+    align-content: center;
+    align-self: center;
     flex-basis: 100%;
+    width: 400px;
     margin: 0 auto;
   }
 }

@@ -753,13 +753,36 @@ footer li a i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .category-voucher--list {
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .category-voucher, .list_style ul li {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  .linear-fade {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .category-voucher--list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    width: 400px;
     margin: 0 auto;
   }
 }
