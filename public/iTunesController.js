@@ -9,7 +9,30 @@
 //       font.onload = () => document.body.classList.add('wf-active');
 //       document.head.appendChild(font);
 //  })();
- 
+
+
+var btn = document.querySelector('.fa-bars');
+btn.addEventListener('click', function() {
+    document.getElementById("myDropdown").classList.toggle("show");
+     var myDropdown = document.getElementById("myDropdown");
+     if (myDropdown.classList.contains('show')) {
+         myDropdown.classList.remove('show');
+     }
+})
+
+var myFunction = function() {
+   document.getElementById("myDropdown").classList.toggle("show");
+}
+    window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+        var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains('show')) {
+            myDropdown.classList.remove('show');
+          }
+        }
+ }   
+
+  
 
 var iTunesGenre = async () => {
     try {
@@ -73,12 +96,12 @@ var iTunesFront = async () => {
             <div class="front--cards">
               <div id="front--cover" style=flex: 1 0 50%;">
                  <div id="front--artwork">
-                 <img src=" ${res.data.results[i].artworkUrl100}" alt="" />
+                 <img src=" ${res.data.results[i].artworkUrl100}" alt="" id="coverimg"/>
                     </div>
                 <div>  ${res.data.results[i].artistName} </div>
                 <div>  ${res.data.results[i].collectionName} </div>
-                <div style="display: block; margin:0; left: 0;  padding: 10px; border-radius:15px; background-color: #C4C4C4;"> 
-                 ${res.data.results[i].primaryGenreName} 
+                <div style="align-self: flex-start; align-content: flex-start; margin-left: 20px; margin-top: 20px; padding: 10px; border-radius:15px; background-color: #C4C4C4;"> 
+                &#35; ${res.data.results[i].primaryGenreName} 
                  </div>
                 <hr style=" width:250px; margin: 20px 20px;"/>
                   <div stlye="border-top:1px solid gray; display: flex; flex-direction: row;">

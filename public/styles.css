@@ -85,7 +85,6 @@ a:hover {
 }
 
 nav {
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,6 +150,29 @@ nav ul li a {
   border: 0px solid white;
   background-color: #EEEEEE;
   border-radius: 25px;
+}
+
+#menu button {
+  display: none;
+}
+
+#menu button:hover {
+  opacity: .5;
+}
+
+@media screen and (max-width: 1200px) {
+  .dropdown-content a {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  nav ul li {
+    display: none;
+  }
+  #menu button {
+    display: block;
+  }
 }
 
 .bg::after {
@@ -445,11 +467,39 @@ nav ul li a {
   margin-right: 20px;
 }
 
+@media screen and (max-width: 870px) {
+  #contact--formfield {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #contact--forms {
+    padding: 0 50px 0 50px;
+    margin: 0 50px 0 50px;
+  }
+  #contact--textarea {
+    margin: 20px auto;
+  }
+  div#contact--submit {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  div#contact--submit button {
+    margin: 0 auto;
+    width: 200px;
+  }
+}
+
 textarea {
   background: gray center center no-repeat;
   /* This ruins default border */
   border: 1px solid #888;
   color: white;
+  width: 100%;
 }
 
 #contact--submit {
@@ -817,5 +867,14 @@ footer li a i {
   border-radius: 45px;
   padding: 10px 35px 10px 35px;
   font-family: 'Work Sans';
+}
+
+#play i {
+  opacity: 0;
+}
+
+#coverimg:hover #play i {
+  opacity: 1;
+  z-index: 1;
 }
 /*# sourceMappingURL=styles.css.map */

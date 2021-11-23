@@ -10,8 +10,43 @@
  <link rel="stylesheet" href="./styles.css" media='all' rel='stylesheet' type='text/css' >
    <style>
       table {
-         margin: 0 auto;
+       margin: 0 auto;
       }
+      #menu i {
+         margin: 0; 
+         padding: 0;
+         z-index: 1;
+      }
+      #menu button {
+      float: right;
+      margin: 0;
+      padding: 20px;
+      right: 20px;
+      border: 0;
+      position: absolute;
+      background-color: transparent;
+      z-index: 0;
+      }
+      .dropdown-content {
+         display: none;
+         position: relative;
+         background-color: #f9f9f9;
+         min-width: 160px;
+         z-index: 1;
+         margin: 20px;
+         }
+         /* Links inside the dropdown */
+         .dropdown-content a {
+            float: left;
+            color: black;
+            padding: 0px 10px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+         }            
+         .show {
+            display: block;
+            } 
    </style>
 
 </head>
@@ -20,6 +55,15 @@
    <div class="brand">
       <a href="/"><img src="./assets/images/logo.png" alt="logo" id="logo"></a>
       <span id="brand"> GETMEDIA </span>  
+   </div>
+   <div id="menu" class="dropdown">
+     <button onclick="myFunction()" class="dropbtn"> <i class="fas fa-bars"></i> </button>
+     <div id="myDropdown" class="dropdown-content">
+      <a href="/search">SEARCH</a>
+      <a href="/shop">SHOP</a>
+      <a href="/contact">CONTACT</a>
+    </div>
+      <!-- <i class="fas fa-hamburger"></i> -->
    </div>
    <ul>
       <li><a href="/">HOME</a></li>
