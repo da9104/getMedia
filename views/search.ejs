@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
  <title>AngularJS iTunes</title>
@@ -60,8 +62,7 @@
    #front--artwork img:hover {
       opacity: .5;
    }
-
-
+   
  </style>
  
    </head>
@@ -73,9 +74,6 @@
 
    <div class="nav--search">
       <form action="#" name="search" ng-submit="searchiTunes(artist)">
-         <!-- Artist/band name required, use the ng-model 
-         directive to pass the artist name back into the
-         controller/model -->
          <input type="search" required ng-model="artist"  placeholder="&#xF002; Search" style="font-family: Arial, 'FontAwesome'"/>
          <!-- <i class="fa fa-search"></i> -->
          <button type="submit" value="Search"/><i class="fas fa-play"></i></button>
@@ -89,7 +87,6 @@
       <li><a href="/contact">CONTACT</a></li>
    </ul>   
    </nav>
-
  <!-- use the ng-controller directive to scope
  this body to iTunesController -->
     <div id="search">
@@ -111,8 +108,6 @@
     </div>
  <!-- show an error if there's a search error -->
  {{ error }}
-
-   
 
  <table ng-show="songs" class="search--results">
 
@@ -141,7 +136,6 @@
      <td><a href="{{song.previewUrl}}">Play</a></td>
      <td>{{song.collectionPrice}}</td>
   
-  
      </tr>
      </tbody>
      </table>
@@ -163,7 +157,6 @@
       </footer>
  <!-- the script which will contain the iTunesController -->
 <script src="./iTunesController.js"></script>
-
 
 </body>
 </html>

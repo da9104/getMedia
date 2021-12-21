@@ -84,7 +84,7 @@ var iTunesFront = async () => {
                 <p>
                  Listen Apple Music
                  <span style="padding: 10px; border-radius:15px; background-color: #21D3A9">
-                 &#163; ${res.data.results[i].collectionPrice} <i class="fas fa-chevron-down"></i> 
+                 &#163; ${res.data.results[i].collectionPrice} <i class="fas fa-chevron-down" id="arrPrice"></i> 
                  </span>
                </p>
                </div>
@@ -145,6 +145,14 @@ var iTunesController =  function ($scope, $http) {
     }
    }
 
-
-
-
+//    $(document).on('click', '#arrPrice', function() {
+//      //  console.log("clicked");
+//      // alert('?')
+//       var $this = $(this),
+//          $i = $this.parent().find('> p');
+//          $arrow = $('.fa-chevron-down')
+//          $i.toggle();
+//          if ($('#arrPrice').on('click')) {
+//             $arrow.toggleClass("rotate");
+//          }
+//    });

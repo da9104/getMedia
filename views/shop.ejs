@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" ng-app>
  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
  <title>AngularJS iTunes</title>
  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.js"></script>
@@ -13,35 +15,27 @@
          table {
             margin: 0 auto;
          }
-        
-      </style>
-   <script>
-
-   $(document).on('click', '#voucher', function() {
-      //console.log("clicked")
-      var $this = $(this),
-         $ul = $this.parent().find('> ul');
-         $arrow = $('.fa-chevron-down')
-         $ul.toggle();
-
-         if ($('#voucher').on('click')) {
-           // console.log('?')
-            $arrow.toggleClass("rotate");
-         }
-
-   });
-
-   </script>
-         <style>
-            .rotate {
+         .rotate {
                -webkit-transform: rotate(180deg);
                -moz-transform: rotate(180deg);
                -ms-transform: rotate(180deg);
                -o-transform: rotate(180deg);
                transform: rotate(180deg);
             }
-          </style>
+      </style>
+   <script>
 
+   $(document).on('click', '#voucher', function() {
+      var $this = $(this),
+         $ul = $this.parent().find('> ul');
+         $arrow = $('.fa-chevron-down')
+         $ul.toggle();
+         if ($('#voucher').on('click')) {
+            $arrow.toggleClass("rotate");
+         }
+   });
+
+   </script>
 </head>
 <body ng-controller="iTunesController">
 <nav>
