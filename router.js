@@ -6,16 +6,12 @@ router.use(
     cors({
          credentials: true,
          origin:[
+             '*',
              'http://localhost:5600',
              'localhost:5600',
-             'https://get--media.herokuapp.com',
-             'https://get--media.herokuapp.com/',
-             'get--media.herokuapp.com',
-             'get--media.herokuapp.com/',
-             'https://git.heroku.com/get--media.git',
-         ]
-        })
-        );
+             ]
+         })
+      );
 
 router.get('/', function(req, res) {
     res.setHeader("Access-Control-Allow-Origin", "*");
